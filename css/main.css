@@ -18,12 +18,12 @@ body{
     width: 100vw;
     height: 100vh;
 
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;/*??*/
+    scroll-snap-type: x mandatory;/*??*/
 }
 
 .slider > div{
-    scroll-snap-align: start;
+    scroll-snap-align: start;/*??*/
 }
 
 .slide{
