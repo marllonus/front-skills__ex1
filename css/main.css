@@ -9,3 +9,20 @@ html{
 body{
 
 }
+
+.slider{
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    
+    width: 100vw;
+    height: 100vh;
+}
+
+.slide{
+    background-color: cornflowerblue;
+    flex-shrink: 0;
+
+    width: 100%;
+    height: 100%;
+}
