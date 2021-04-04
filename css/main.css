@@ -1,11 +1,33 @@
 :root{
-
-}
-
-html{
     
 }
 
-body{
-
+html{
+    font-size: 16px;
 }
+
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    --n: 1;
+
+    overflow-y: hidden;
+    height: 50vw;
+    max-height: 100vh;
+
+    width: calc(var(--n)*100%);
+}
+
+.container img{
+    min-width: 100%;
+    width: 100%;
+    
+    width: calc(100%/var(--n));
+}
+
