@@ -14,7 +14,11 @@ document.addEventListener('DOMContentLoaded', (ev)=>{
             const sign = dx > 0 ? 1 : -1;
 
             const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-            ev.target.parentNode.scrollBy(sign*vw, 0);
+            ev.target.parentNode.scrollBy({
+                    behavior:'smooth', 
+                    top:0,
+                    left:vw*sign
+                });
         },
         run(ev){
             
@@ -31,18 +35,26 @@ document.addEventListener('DOMContentLoaded', (ev)=>{
         //
         slide.addEventListener('mouseup', (ev)=>{
 
-            swipe.run(ev);
-
             ev.target.style.cursor = 'grab';
+
+            swipe.run(ev);
         }, false);
 
         //
         slide.addEventListener('mousedown', (ev)=>{
 
-            swipe.run(ev);
-
             ev.target.style.cursor = 'grabbing';
+
+            swipe.run(ev);
+        }, false);
+
+        //
+        slide.addEventListener('mouseout', (ev)=>{
+
+            swipe.startPoint = 0;
+            swipe.isStart = true;
+
+            ev.target.style.cursor = 'grab';
         }, false);
     }
-
 });
