@@ -1,5 +1,6 @@
 //add swipe by js on slides
 
+/** add documentation ?? */
 document.addEventListener('DOMContentLoaded', (ev)=>{
 
     const swipe = {
