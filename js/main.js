@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', (ev)=>{
         }
     };
 
-    const slides = document.querySelectorAll('.slide');
+    const slides = document.querySelectorAll('.slider__slide');
     if (!slides) return
 
     for(const slide of slides)

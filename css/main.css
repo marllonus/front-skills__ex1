@@ -10,6 +10,7 @@ body{
 
 }
 
+/** slider */
 .slider{
     display: flex;
     align-items: center;
@@ -24,11 +25,12 @@ body{
     user-select: none;
 }
 
+/** slides */
 .slider > div{
     scroll-snap-align: start;/*what is it ??*/
 }
 
-.slide{
+.slider__slide{
     background-color: cornflowerblue;
     flex-shrink: 0;
 
@@ -36,7 +38,16 @@ body{
     height: 100%;
 }
 
-.slide:hover {
+.slider__slide:hover {
 
     cursor: grab;
+}
+
+/** slider bar */
+.slider-widget__bar{
+    
+}
+
+.slider-widget__indicator{
+    
 }
